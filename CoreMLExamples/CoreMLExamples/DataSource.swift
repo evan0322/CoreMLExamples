@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ExampleType {
+enum ExampleType: String {
     case genderClassification
     case faceDetection
     case spamDetection
