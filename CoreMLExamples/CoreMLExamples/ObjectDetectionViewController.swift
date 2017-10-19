@@ -17,6 +17,7 @@ class ObjectDetectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = "🤔"
     }
     
     func process(_ image: UIImage) {
