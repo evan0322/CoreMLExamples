@@ -13,7 +13,7 @@ class CategoryController: UITableViewController {
     let dataSource = [
         Example(type: .faceDetection, title: "🤡 Face Recognition", detail: "Detect faces via camera"),
         Example(type: .objectDetection, title: "🤔 Object Detection", detail: "Detects the dominant objects present in an image"),
-        Example(type: .spamDetection, title: "😈 Spam Detection", detail: "Predict if a messsage is a spam")
+        Example(type: .sentimentDetection, title: "🙃 Sentiment Detection", detail: "Predict if a messsage is a spam")
     ]
     
 

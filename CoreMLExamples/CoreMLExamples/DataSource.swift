@@ -11,7 +11,7 @@ import UIKit
 enum ExampleType: String {
     case objectDetection
     case faceDetection
-    case spamDetection
+    case sentimentDetection
 }
 
 class Example: NSObject {

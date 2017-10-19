@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="Qc8-iU-euy"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="faceDetection" id="dz0-MD-MuB"/>
-                        <segue destination="Byk-dM-bVo" kind="show" identifier="spamDetection" id="thf-2o-Ouf"/>
+                        <segue destination="Byk-dM-bVo" kind="show" identifier="sentimentDetection" id="thf-2o-Ouf"/>
                         <segue destination="8xh-mv-ynq" kind="show" identifier="objectDetection" id="UYD-q6-6Ee"/>
                     </connections>
                 </tableViewController>
@@ -99,20 +99,52 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--Spam Detection View Controller-->
+        <!--Sentiment Detection View Controller-->
         <scene sceneID="tSB-hl-LL4">
             <objects>
-                <viewController id="Byk-dM-bVo" customClass="SpamDetectionViewController" customModule="CoreMLExamples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Byk-dM-bVo" customClass="SentimentDetectionViewController" customModule="CoreMLExamples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKn-Zc-dlL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcK-gX-uUL">
+                                <rect key="frame" x="20" y="314" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MhF-KO-HeI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-Ro-0PH">
+                                <rect key="frame" x="20" y="84" width="335" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="UvG-LU-reA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jgb-Ro-0PH" firstAttribute="top" secondItem="kaQ-5Q-QAv" secondAttribute="top" constant="20" id="45x-8N-We1"/>
+                            <constraint firstItem="kaQ-5Q-QAv" firstAttribute="trailing" secondItem="Jgb-Ro-0PH" secondAttribute="trailing" constant="20" id="BHa-Xb-sc2"/>
+                            <constraint firstItem="XcK-gX-uUL" firstAttribute="leading" secondItem="kaQ-5Q-QAv" secondAttribute="leading" constant="20" id="ED3-vy-LBn"/>
+                            <constraint firstItem="XcK-gX-uUL" firstAttribute="top" secondItem="Jgb-Ro-0PH" secondAttribute="bottom" constant="10" id="p5g-F6-Fhe"/>
+                            <constraint firstItem="kaQ-5Q-QAv" firstAttribute="trailing" secondItem="XcK-gX-uUL" secondAttribute="trailing" constant="20" id="sWg-ig-hpw"/>
+                            <constraint firstItem="Jgb-Ro-0PH" firstAttribute="leading" secondItem="kaQ-5Q-QAv" secondAttribute="leading" constant="20" id="vWG-bR-fbF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kaQ-5Q-QAv"/>
                     </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="Jgb-Ro-0PH" id="qmG-0h-b7t"/>
+                        <outlet property="resultLabel" destination="XcK-gX-uUL" id="HJZ-u0-ZAL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJA-ix-Umb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="848"/>
+            <point key="canvasLocation" x="512.79999999999995" y="847.82608695652175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EY1-Vc-lnU">

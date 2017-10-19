@@ -15,9 +15,12 @@
 		59DD4D1D1F983F9A005212AB /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D1C1F983F9A005212AB /* CategoryController.swift */; };
 		59DD4D1F1F9840B5005212AB /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D1E1F9840B5005212AB /* DataSource.swift */; };
 		59DD4D211F985726005212AB /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D201F985726005212AB /* ObjectDetectionViewController.swift */; };
-		59DD4D231F985754005212AB /* SpamDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D221F985754005212AB /* SpamDetectionViewController.swift */; };
+		59DD4D231F985754005212AB /* SentimentDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D221F985754005212AB /* SentimentDetectionViewController.swift */; };
 		59DD4D251F986024005212AB /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D241F986024005212AB /* UIImage+CVPixelBuffer.swift */; };
 		59DD4D271F9860CC005212AB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D261F986082005212AB /* Inceptionv3.mlmodel */; };
+		59DD4D2F1F986B60005212AB /* SentimentPolarity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D2E1F986B5D005212AB /* SentimentPolarity.mlmodel */; };
+		59DD4D311F986B87005212AB /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D301F986B87005212AB /* ClassificationService.swift */; };
+		59DD4D331F986C23005212AB /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD4D321F986C23005212AB /* Sentiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +34,12 @@
 		59DD4D1C1F983F9A005212AB /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		59DD4D1E1F9840B5005212AB /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		59DD4D201F985726005212AB /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
-		59DD4D221F985754005212AB /* SpamDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamDetectionViewController.swift; sourceTree = "<group>"; };
+		59DD4D221F985754005212AB /* SentimentDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentDetectionViewController.swift; sourceTree = "<group>"; };
 		59DD4D241F986024005212AB /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		59DD4D261F986082005212AB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		59DD4D2E1F986B5D005212AB /* SentimentPolarity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentPolarity.mlmodel; sourceTree = "<group>"; };
+		59DD4D301F986B87005212AB /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
+		59DD4D321F986C23005212AB /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +73,15 @@
 			isa = PBXGroup;
 			children = (
 				59DD4D261F986082005212AB /* Inceptionv3.mlmodel */,
+				59DD4D2E1F986B5D005212AB /* SentimentPolarity.mlmodel */,
 				59DD4D081F983DF8005212AB /* AppDelegate.swift */,
 				59DD4D1E1F9840B5005212AB /* DataSource.swift */,
 				59DD4D1C1F983F9A005212AB /* CategoryController.swift */,
 				59DD4D0A1F983DF8005212AB /* FaceDetectionViewController.swift */,
 				59DD4D201F985726005212AB /* ObjectDetectionViewController.swift */,
-				59DD4D221F985754005212AB /* SpamDetectionViewController.swift */,
+				59DD4D221F985754005212AB /* SentimentDetectionViewController.swift */,
+				59DD4D301F986B87005212AB /* ClassificationService.swift */,
+				59DD4D321F986C23005212AB /* Sentiment.swift */,
 				59DD4D241F986024005212AB /* UIImage+CVPixelBuffer.swift */,
 				59DD4D0C1F983DF8005212AB /* Main.storyboard */,
 				59DD4D0F1F983DF8005212AB /* Assets.xcassets */,
@@ -157,11 +166,14 @@
 				59DD4D0B1F983DF8005212AB /* FaceDetectionViewController.swift in Sources */,
 				59DD4D211F985726005212AB /* ObjectDetectionViewController.swift in Sources */,
 				59DD4D091F983DF8005212AB /* AppDelegate.swift in Sources */,
-				59DD4D231F985754005212AB /* SpamDetectionViewController.swift in Sources */,
+				59DD4D331F986C23005212AB /* Sentiment.swift in Sources */,
+				59DD4D2F1F986B60005212AB /* SentimentPolarity.mlmodel in Sources */,
+				59DD4D231F985754005212AB /* SentimentDetectionViewController.swift in Sources */,
 				59DD4D251F986024005212AB /* UIImage+CVPixelBuffer.swift in Sources */,
 				59DD4D271F9860CC005212AB /* Inceptionv3.mlmodel in Sources */,
 				59DD4D1F1F9840B5005212AB /* DataSource.swift in Sources */,
 				59DD4D1D1F983F9A005212AB /* CategoryController.swift in Sources */,
+				59DD4D311F986B87005212AB /* ClassificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
