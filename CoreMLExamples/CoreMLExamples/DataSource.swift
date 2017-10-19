@@ -9,7 +9,7 @@
 import UIKit
 
 enum ExampleType: String {
-    case genderClassification
+    case objectDetection
     case faceDetection
     case spamDetection
 }

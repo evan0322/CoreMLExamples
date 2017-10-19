@@ -52,6 +52,8 @@
                     <navigationItem key="navigationItem" id="Qc8-iU-euy"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="faceDetection" id="dz0-MD-MuB"/>
+                        <segue destination="Byk-dM-bVo" kind="show" identifier="spamDetection" id="thf-2o-Ouf"/>
+                        <segue destination="8xh-mv-ynq" kind="show" identifier="objectDetection" id="UYD-q6-6Ee"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBh-Ay-9dt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,6 +99,21 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
+        <!--Spam Detection View Controller-->
+        <scene sceneID="tSB-hl-LL4">
+            <objects>
+                <viewController id="Byk-dM-bVo" customClass="SpamDetectionViewController" customModule="CoreMLExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HKn-Zc-dlL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="kaQ-5Q-QAv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJA-ix-Umb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="848"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EY1-Vc-lnU">
             <objects>
@@ -114,6 +131,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK1-QE-phZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1228" y="134"/>
+        </scene>
+        <!--Object Detection View Controller-->
+        <scene sceneID="glL-Vb-pq7">
+            <objects>
+                <viewController id="8xh-mv-ynq" customClass="ObjectDetectionViewController" customModule="CoreMLExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0FL-Qe-auc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZNJ-Bu-Ipo">
+                                <rect key="frame" x="10" y="84" width="355" height="355"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZNJ-Bu-Ipo" secondAttribute="height" multiplier="1:1" id="xZ3-Ew-y5N"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="aju-gC-sW7">
+                                <rect key="frame" x="126" y="581" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a Picture"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="8xh-mv-ynq" eventType="touchUpInside" id="lMF-D8-MKt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esT-cK-9uB">
+                                <rect key="frame" x="0.0" y="484" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pNn-cP-RDx" firstAttribute="trailing" secondItem="ZNJ-Bu-Ipo" secondAttribute="trailing" constant="10" id="D5o-Hw-uDq"/>
+                            <constraint firstItem="ZNJ-Bu-Ipo" firstAttribute="top" secondItem="pNn-cP-RDx" secondAttribute="top" constant="20" id="e9O-tr-FbA"/>
+                            <constraint firstItem="ZNJ-Bu-Ipo" firstAttribute="leading" secondItem="pNn-cP-RDx" secondAttribute="leading" constant="10" id="u2D-Am-6wa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pNn-cP-RDx"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZNJ-Bu-Ipo" id="cwN-0l-Li0"/>
+                        <outlet property="label" destination="esT-cK-9uB" id="NPC-oM-pcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2EJ-1B-S3N" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512.79999999999995" y="-612.14392803598207"/>
         </scene>
     </scenes>
 </document>
